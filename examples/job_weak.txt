@@ -1,0 +1,8 @@
+AppCraft - Senior iOS Developer
+
+Requirements:
+- 6+ years of iOS development
+- Expert in Swift and SwiftUI
+- Experience with Core Data and Combine
+- Multiple apps published on the App Store
+- Strong understanding of Apple's Human Interface Guidelines

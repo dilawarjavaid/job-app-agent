@@ -1,0 +1,13 @@
+Northwind AI - Machine Learning Engineer (LLM Applications)
+
+We're looking for an ML engineer to build and ship LLM-powered products.
+
+Requirements:
+- 2+ years of experience as an ML engineer or data scientist
+- Strong Python, with PyTorch or similar
+- Experience deploying models as APIs (FastAPI, Docker)
+- AWS experience (SageMaker, Lambda, S3)
+- Hands-on work with RAG and LLM APIs
+- MLflow or similar experiment tracking; CI/CD
+- SQL and PostgreSQL
+- Bachelor's degree in Computer Science or related field

@@ -1,0 +1,41 @@
+ALEX RAHMAN
+Machine Learning Engineer
+Toronto, ON | alex.rahman@email.com | github.com/alexrahman | linkedin.com/in/alexrahman
+
+SUMMARY
+Machine learning engineer with 3 years of experience building and deploying
+ML models in production. Skilled in Python, PyTorch, and MLOps, with recent
+work on LLM-powered applications and anomaly detection systems.
+
+SKILLS
+Languages: Python, SQL, Bash
+ML/AI: PyTorch, scikit-learn, Hugging Face Transformers, LangChain, RAG, LLM APIs
+Data: pandas, NumPy, Spark, PostgreSQL
+MLOps & Cloud: Docker, FastAPI, MLflow, AWS (S3, SageMaker, Lambda), GitHub Actions
+Other: Git, REST APIs, unit testing (pytest)
+
+EXPERIENCE
+Machine Learning Engineer | DataNova Solutions | Jan 2024 - Present
+- Built an anomaly detection pipeline for IoT sensor data, cutting false alerts by 35%
+- Deployed models as FastAPI services in Docker on AWS, serving 50K+ predictions/day
+- Developed a RAG-based internal search tool over 10K documents using LLM APIs
+- Set up MLflow experiment tracking and CI/CD with GitHub Actions
+
+Junior Data Scientist | Insightly Analytics | Jun 2022 - Dec 2023
+- Built churn prediction models (XGBoost) that improved retention targeting by 20%
+- Automated weekly reporting pipelines in Python and SQL, saving 10 hours/week
+- Cleaned and engineered features from 5M+ row datasets with pandas and Spark
+
+PROJECTS
+Sentinel IoT Anomaly Automation
+- Real-time anomaly detection and automated alerting for IoT device data
+
+Job Application Agent
+- Agentic AI assistant that analyzes job postings, scores resume fit,
+  and drafts tailored cover letters using LLM tool calling
+
+EDUCATION
+B.Sc. Computer Science | University of Lahore | 2022
+
+CERTIFICATIONS
+AWS Certified Machine Learning - Specialty

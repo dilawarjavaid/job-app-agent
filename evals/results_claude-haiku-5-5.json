@@ -1,0 +1,29 @@
+[
+  {
+    "case": "strong_match",
+    "score": 88,
+    "passed": true,
+    "problems": [],
+    "steps": 4,
+    "tokens": 12962,
+    "seconds": 10.9
+  },
+  {
+    "case": "partial_match",
+    "score": 28,
+    "passed": true,
+    "problems": [],
+    "steps": 3,
+    "tokens": 10930,
+    "seconds": 12.8
+  },
+  {
+    "case": "weak_match",
+    "score": 5,
+    "passed": true,
+    "problems": [],
+    "steps": 4,
+    "tokens": 12416,
+    "seconds": 11.5
+  }
+]

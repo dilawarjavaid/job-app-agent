@@ -18,10 +18,15 @@ def main():
         "Analyze my fit, save the assessment, and write a cover letter."
     )
 
+
     console = Console()
-    console.print(f"[bold]Model:[/bold] {args.model}\n")
-    result = run_agent(task, model=args.model, max_steps=args.max_steps)
-    console.print(Markdown(result))
+    run = run_agent(task, model=args.model, max_steps=args.max_steps)
+    console.print(Markdown(run["text"]))
+    console.print(
+        f"\n[dim]{run['steps']} steps | "
+        f"{run['input_tokens']} in / {run['output_tokens']} out tokens | "
+        f"{run['seconds']}s[/dim]"
+    )
 
 
 if __name__ == "__main__":

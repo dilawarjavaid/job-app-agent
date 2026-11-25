@@ -1,0 +1,29 @@
+[
+  {
+    "name": "strong_match",
+    "resume": "examples/resume_sample.txt",
+    "job": "examples/job_strong.txt",
+    "min_score": 70,
+    "max_score": 100,
+    "expected_matches": ["PyTorch", "FastAPI", "RAG"],
+    "expected_gaps": []
+  },
+  {
+    "name": "partial_match",
+    "resume": "examples/resume_sample.txt",
+    "job": "examples/job_partial.txt",
+    "min_score": 20,
+    "max_score": 60,
+    "expected_matches": ["Docker"],
+    "expected_gaps": ["OpenCV", "TensorFlow"]
+  },
+  {
+    "name": "weak_match",
+    "resume": "examples/resume_sample.txt",
+    "job": "examples/job_weak.txt",
+    "min_score": 0,
+    "max_score": 20,
+    "expected_matches": [],
+    "expected_gaps": ["Swift"]
+  }
+]

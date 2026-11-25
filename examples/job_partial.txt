@@ -1,0 +1,9 @@
+Visionary Labs - Computer Vision Engineer
+
+Requirements:
+- M.S. in Computer Science or related field
+- 4+ years of experience in computer vision
+- Expert in OpenCV and TensorFlow
+- Experience with image classification and object detection models
+- Python and C++
+- Experience deploying models with Docker
