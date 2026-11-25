@@ -32,7 +32,7 @@ The model decides which tools to call and in what order. The code only runs the 
 ## Quickstart
 
 ```bash
-git clone github.com/dilawarjavaid/job-app-agent.git
+git clone https://github.com/dilawarjavaid/job-app-agent.git
 cd job-app-agent
 python -m venv .venv
 .venv\Scripts\activate        # Mac/Linux: source .venv/bin/activate
@@ -131,5 +131,5 @@ job-app-agent/
 
 ## Author
 
-**Dilawar Javaid**, AI platform Engineer
+**Dilawar Javaid**, AI Platform Engineer
 [LinkedIn](https://www.linkedin.com/in/dilawar-javaid-ab576416b/) · [GitHub](https://github.com/dilawarjavaid)
