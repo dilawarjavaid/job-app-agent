@@ -131,7 +131,5 @@ job-app-agent/
 
 ## Author
 
-## Author
-
 **Dilawar Javaid**, AI platform Engineer
 [LinkedIn](https://www.linkedin.com/in/dilawar-javaid-ab576416b/) · [GitHub](https://github.com/dilawarjavaid)
