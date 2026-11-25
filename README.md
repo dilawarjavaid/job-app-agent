@@ -32,7 +32,7 @@ The model decides which tools to call and in what order. The code only runs the 
 ## Quickstart
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/job-app-agent.git
+git clone github.com/dilawarjavaid/job-app-agent.git
 cd job-app-agent
 python -m venv .venv
 .venv\Scripts\activate        # Mac/Linux: source .venv/bin/activate
@@ -49,6 +49,37 @@ python main.py --job examples/job_partial.txt --model claude-sonnet-5-5
 ```
 
 Outputs are saved to `outputs/`.
+
+## Example output
+
+```
+Step 1: read_file(['path'])
+Step 1: read_file(['path'])
+Step 2: save_assessment([...])
+Step 2: save_output([...])
+```
+
+`outputs/assessment_northwindai.json`:
+```json
+{
+  "company": "Northwind AI",
+  "score": 92,
+  "matched_skills": [
+    "2+ years as ML engineer/data scientist (3 years, DataNova and Insightly)",
+    "Python with PyTorch",
+    "Deploying models as APIs with FastAPI and Docker (50K+ predictions/day)",
+    "AWS: SageMaker, Lambda, S3 (listed in skills)",
+    "RAG and LLM API work (RAG search tool over 10K documents)",
+    "MLflow experiment tracking and CI/CD with GitHub Actions",
+    "SQL and PostgreSQL",
+    "Bachelor's degree in Computer Science (B.Sc., University of Lahore, 2022)"
+  ],
+  "missing_skills": [
+    "AWS SageMaker, Lambda, and S3 appear only in the skills list, not in experience bullets, so hands-on depth is unclear"
+  ],
+  "summary": "Alex Rahman is a strong fit for this LLM applications ML engineer role. The resume meets every listed requirement, including 3 years of ML experience, PyTorch, FastAPI/Docker deployment, RAG with LLM APIs, MLflow, CI/CD, and a CS degree. The main gap is that the AWS services (SageMaker, Lambda, S3) are listed in skills but not described in experience bullets, so the cover letter should present them carefully."
+}
+```
 
 ## Evaluation
 
@@ -100,4 +131,7 @@ job-app-agent/
 
 ## Author
 
-Dilawar Javaid
+## Author
+
+**Dilawar Javaid**, AI platform Engineer
+[LinkedIn](https://www.linkedin.com/in/dilawar-javaid-ab576416b/) · [GitHub](https://github.com/dilawarjavaid)
