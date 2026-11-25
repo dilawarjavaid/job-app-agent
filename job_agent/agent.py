@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import anthropic
 from rich.console import Console
 
-from job_agent.tools import read_file, fetch_job_posting, save_output
+from job_agent.tools import read_file, fetch_job_posting, save_output, save_assessment
 
 load_dotenv()
 client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
@@ -19,6 +19,7 @@ Your workflow:
 3. Extract the key requirements (skills, experience, qualifications).
 4. Compare them to the resume. Give a match score from 0 to 100,
    list matched skills, and list missing or weak areas.
+   Then call save_assessment with these results.
 5. Write a tailored cover letter (under 350 words) that highlights the
    strongest matches.
 6. Save the cover letter with save_output as a .txt file.
@@ -60,6 +61,22 @@ TOOLS = [
             "required": ["filename", "content"],
         },
     },
+
+        {
+        "name": "save_assessment",
+        "description": "Save the structured fit assessment as JSON. Call once after comparing the resume to the job.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "company": {"type": "string"},
+                "score": {"type": "integer", "minimum": 0, "maximum": 100},
+                "matched_skills": {"type": "array", "items": {"type": "string"}},
+                "missing_skills": {"type": "array", "items": {"type": "string"}},
+                "summary": {"type": "string", "description": "2-3 sentence overall assessment"},
+            },
+            "required": ["company", "score", "matched_skills", "missing_skills", "summary"],
+        },
+    },
 ]
 
 # What actually runs: tool name -> Python function
@@ -67,6 +84,7 @@ TOOL_FUNCTIONS = {
     "read_file": read_file,
     "fetch_job_posting": fetch_job_posting,
     "save_output": save_output,
+    "save_assessment": save_assessment,
 }
 
 
@@ -80,7 +98,7 @@ def run_tool(name: str, tool_input: dict) -> str:
         return f"Error running {name}: {e}"
 
 
-def run_agent(task: str, max_steps: int = 10) -> str:
+def run_agent(task: str, model: str = MODEL, max_steps: int = 10) -> str:
     messages = [{"role": "user", "content": task}]
 
     for step in range(1, max_steps + 1):
